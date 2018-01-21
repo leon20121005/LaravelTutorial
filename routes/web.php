@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function ()
+{
+    $links = \App\Link::all();
+    return view('welcome', ['links' => $links]);
 });

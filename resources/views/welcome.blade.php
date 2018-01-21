@@ -89,6 +89,12 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+
+                <div class="links">
+                    @foreach ($links as $link)
+                        <a href="{{ $link->url }}">{{ $link->title }}</a>
+                    @endforeach
+                </div>
             </div>
         </div>
     </body>
